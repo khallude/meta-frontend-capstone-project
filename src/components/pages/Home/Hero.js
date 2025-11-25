@@ -14,20 +14,7 @@ const Hero = () => {
         </video>
         <div className="overlay"></div>
       </div>
-
-      {/* Hero content on top */}
-      <div className="container hero-content">
-        <h1>Little Lemon</h1>
-        <h2>Chicago</h2>
-        <p>
-          We are a family owned Mediterranean restaurant,
-          focused on traditional recipes served with a modern twist.
-        </p>
-        <Link className="button-primary" to={pages.get('bookings').path}>
-          Reserve a table
-        </Link>
-      </div>
-    </section>
+          </section>
   );
 };
 
