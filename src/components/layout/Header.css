@@ -1,0 +1,132 @@
+/* Header full width */
+.header {
+  width: 100%;
+  height: 12rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #feead8; /* full width background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* centers the inner container */
+}
+
+/* Container inside header */
+.header-inner {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.header__logo {
+  height: 96px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .header__logo {
+    height: 45px;
+  }
+}
+
+/* Navbar */
+.navbar__list {
+  display: flex;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Nav links with underline animation */
+.navbar__link:link,
+.navbar__link:visited {
+  font-size: 1.6rem;
+  padding: 2rem 0;
+  position: relative;
+  text-decoration: none;
+  color: #292929;
+  font-weight: 400;
+  display: inline-block;
+  height: inherit;
+  /* font-family: "kanit", sans-serif; */
+  /* color: #000; */
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.navbar__link:link::before,
+.navbar__link:link::after,
+.navbar__link:visited::before,
+.navbar__link:visited::after {
+  content: " ";
+  position: absolute;
+  background-color: #865d36;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navbar__link:link::before,
+.navbar__link:visited::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.navbar__link:link::after,
+.navbar__link:visited::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.navbar__link:hover,
+.navbar__link:active {
+  color: #865d36;
+}
+
+.navbar__link:hover::before,
+.navbar__link:hover::after,
+.navbar__link:active::before,
+.navbar__link:active::after {
+  transform: scaleX(1);
+}
+
+/* Active link */
+.current-location {
+  color: #865d36;
+  font-weight: 600;
+}
+
+/* Button */
+.btn--filled:link, .btn--filled:visited, .btn--filled {
+  padding: 1.6rem 2rem;
+  /* border-radius: 0.4rem; */
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  border: 1px solid #865d36;
+  background-color: #865d36;
+  color: #fff;
+  position: relative;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+   }
+
+.btn--filled:hover, .btn--filled:active {
+  background-color: hsl(29, 33%, 35%); }
+
+
+/* Responsive adjustments */
+@media (max-width: 48em) {
+  .navbar__list {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

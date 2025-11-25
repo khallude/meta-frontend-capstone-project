@@ -1,0 +1,97 @@
+/* src/styles/global.css */
+
+/* Grid system */
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 5.2rem;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--center-v {
+  align-items: center;
+}
+
+/* Helper classes */
+/* Add more as needed */
+
+h1,
+h2,
+h3 {
+  font-family: "kanit", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-image: linear-gradient(
+    to right,
+    #926d4a,
+    #503820
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h1 {
+  letter-spacing: 0.2rem;
+  font-size: 4.4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2rem;
+}
+
+
+a:link,
+a:visited {
+  display: inline-block;
+  height: inherit;
+  /* font-family: "kanit", sans-serif; */
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1); }
+  li {
+    list-style-type: none; }
+
+@keyframes from-right-to-left {
+      from {
+        transform: translateX(100%); }
+      to {
+        transform: translateX(-100%); } }
+
+
+        .u-center-text {
+          text-align: center !important;
+        }
+        .margin-bottom-sm {
+          margin-bottom: 2rem !important;
+        }
+        .margin-bottom-md {
+          margin-bottom: 4rem !important;
+        }
+        .margin-bottom-bg {
+          margin-bottom: 8rem !important;
+        }
+        .margin-bottom-v-bg {
+          margin-bottom: 16rem !important;
+        }
+        .container {
+          padding: 0 3.2rem;
+          /* @include respond(tab-land) {
+            padding: 0 2.8rem;
+          } */
+
+        }
+
+        li {
+          list-style-type: none;
+        }
+

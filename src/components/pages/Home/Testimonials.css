@@ -1,0 +1,99 @@
+
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-row {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide-row-group {
+  display: flex;
+  min-width: 100%;
+  gap: 2rem; /* space between the 2 reviews */
+}
+
+.slide-row-cols {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.customer {
+  flex-shrink: 0;
+  width: 6rem;
+  height: 6rem;
+  border: 2px solid #865d36;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+
+.customer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.customer-text {
+  flex: 1;
+}
+
+.customer-text p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  /* font-style: italic; */
+  margin-bottom: 1rem;
+}
+
+.customer-text h3 {
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+}
+
+.customer-text p:last-child {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.indicator-btn {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator-btn.active {
+  background-color: #865d36;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide-row-group {
+    flex-direction: column;
+  }
+  .slide-row-cols {
+    flex-direction: column;
+  }
+  .customer {
+    width: 5rem;
+    height: 5rem;
+  }
+}

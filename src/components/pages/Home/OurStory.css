@@ -1,0 +1,176 @@
+/* Our Story / About Section CSS */
+
+.ourstory-section {
+  padding: 4rem 0;
+  position: relative;
+}
+
+/* Grid layout */
+.ourstory-section .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Image boxes */
+.about__img-box-1,
+.about__img-box-2 {
+  position: relative; /* required for absolute caption */
+}
+
+
+.about__img-box-1 {
+  grid-area: 3 / 1 / 9 / 2;
+  /* position: relative;  */
+}
+.about__img-box-2 {
+  grid-area: 1 / 3 / 7 / 4;
+  /* position: relative; */
+ }
+
+.about__img-box-1 img,
+.about__img-box-2 img {
+  width: 100%;
+  height: 48rem;
+  /* border-radius: 0.4rem; */
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay caption */
+.about__img-box-1 .img__caption,
+.about__img-box-2 .img__caption {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  color: #fff;
+  font-size: 1.6rem;
+  padding-left: 2rem;
+  /* background: rgba(0, 0, 0, 0.4); optional: adds contrast for readability */
+  z-index: 10;
+}
+
+/* Caption inner span for name/title */
+.about__img-box-1 .img__caption span,
+.about__img-box-2 .img__caption span {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: "Kanit", sans-serif; /* make sure Kanit is imported in global CSS */
+}
+
+/* Text content */
+.about__text {
+  grid-area: 2 / 2 / 9 / 3;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+/* .primary-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #F4CE14;
+} */
+
+.paragraph {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.btn--outline:link, .btn--outline:visited {
+  padding: 1.2rem 1.8rem;
+  /* font-size: 1.8rem; */
+  /* border-radius: 0.4rem; */
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  border: 1px solid currentColor;
+  background-color: transparent;
+  color: #865d36;
+  position: relative;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; }
+
+.btn--outline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #865d36;
+  transition: transform 0.5s;
+  transform-origin: bottom;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transform: scaleY(0);
+  /* border-radius: 0.4rem; */
+}
+
+.btn--outline:hover, .btn--outline:active {
+  border-color: #865d36;
+  color: #fff; }
+  .btn--outline:hover::after, .btn--outline:active::after {
+    transform: scaleY(1); }
+
+
+/* Delivered customers section */
+.delivered {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.delivered__images {
+  display: flex;
+}
+
+.delivered__images img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: 0.2rem solid #fff;
+  margin-right: -1.2rem;
+  object-fit: cover;
+}
+
+.delivered__images img:last-child {
+  margin-right: 0;
+}
+
+.delivered__text {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.delivered__text span {
+  color: #865d36;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .ourstory-section .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ourstory-section .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about__img-box-1,
+  .about__img-box-2 {
+    margin-bottom: 2rem;
+  }
+
+  .delivered__images {
+    justify-content: center;
+  }
+}
