@@ -71,9 +71,13 @@ a:visited {
         .u-center-text {
           text-align: center !important;
         }
+        .margin-bottom-v-sm {
+          margin-bottom: 1rem !important;
+        }
         .margin-bottom-sm {
           margin-bottom: 2rem !important;
         }
+
         .margin-bottom-md {
           margin-bottom: 4rem !important;
         }

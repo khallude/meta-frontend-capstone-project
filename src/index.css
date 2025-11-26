@@ -19,15 +19,10 @@ body {
   border-bottom: 1rem solid #495E57;
 } */
 
-a {
-  text-decoration: none;
-  color: #495E57;
-}
 
 
 form {
-  max-width: 28.125rem;
-  padding: 3rem 2rem;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -37,7 +32,7 @@ label {
   cursor: pointer;
 }
 
-input, select {
+/* input, select {
   height: 2.5rem;
   padding-inline-end: 1rem;
   padding-inline-start: 1rem;
@@ -48,29 +43,29 @@ input, select {
   color: #495E57;
   cursor: pointer;
   transition: border-color 0.3s;
-}
+} */
 
-input:focus, select:focus {
+/* input:focus, select:focus {
   border-width: 0.125rem;
   border-color: #495E57;
-}
+} */
 
 label {
   font-weight: bold;
 }
 
-button {
+/* button {
   border: none;
   cursor: pointer;
-}
+} */
 
 img {
   max-width: 100%;
 }
 
-main > section {
+/* main > section {
   margin-bottom: 5rem;
-}
+} */
 
 .container {
   /* max-width: 100rem; */
@@ -83,7 +78,7 @@ main > section {
   display: grid;
 }
 
-.button-primary {
+/* .button-primary {
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   background-color: #F4CE14;
@@ -98,4 +93,4 @@ main > section {
   background-color: #495E57;
   border-color: #495E57;
   color: #FFFFFF;
-}
+} */
